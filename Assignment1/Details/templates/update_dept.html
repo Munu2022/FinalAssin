@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Update Information</h1>
+
+        <form action="updaterecord_dept/{{ mymember.id }}" method="post">
+        {% csrf_token %}
+        Deparment:<br>
+        <input name="department" value="{{ mymember.department }}">
+        <br><br>
+        Number of Course:<br>
+        <input name="num_course" value="{{ mymember.num_course }}">
+        <br><br>
+        Number of Teachers:<br>
+        <input name="num_teachers" value="{{ mymember.num_teachers }}">
+        <br><br>
+        <input type="submit" value="Submit">
+        </form>
+</body>
+</html>

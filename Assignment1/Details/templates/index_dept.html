@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Department</h1>
+
+    <table border="1">
+    {% for x in mymembers %}
+    <tr>
+    <td><a href="update_dept/{{ x.id }}">{{ x.id }}</a></td>
+    <td>{{ x.department }}</td>
+    <td>{{ x.num_course }}</td>
+    <td>{{ x.num_teachers }}</td>
+    <td><a href="delete_dept/{{ x.id }}">delete</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <p>
+
+        <a href="add_dept/">Add Department information</a>
+    </p>
+    <p>
+
+        <a href="http://127.0.0.1:8000">Home</a>
+    </p>
+</body>
+</html>

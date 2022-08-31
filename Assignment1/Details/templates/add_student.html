@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+
+    <form action="addrecord/" method="post">
+    {% csrf_token %}
+    First Name:<br>
+    <input name="first">
+    <br><br>
+    Last Name:<br>
+    <input name="last">
+    <br><br>
+    Date of birth(YYYY-MM-DD):<br>
+    <input name="dob">
+    <br><br>
+    Roll Number:<br>
+    <input name="roll_number">
+    <br><br>
+    Deparment:<br>
+    <input name="department">
+    <br><br>
+    Course:<br>
+    <input name="course">
+    <br><br>
+    Semester Number:<br>
+    <input name="semester_num">
+    <br><br>
+     Total Marks out of 100:<br>
+        <input name="marks" value="{{ mymember.marks }}">
+        <br><br>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
